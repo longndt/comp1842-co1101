@@ -1,0 +1,20 @@
+/* you can build your own css library like Bootstrap */
+.underline {
+   text-decoration: underline;
+}
+
+.bold {
+   font-weight: bold;
+}
+
+.innghieng {
+   font-style: italic;
+}
+
+.uppercase {
+   text-transform: uppercase;
+}
+
+.center {
+   text-align: center;
+}

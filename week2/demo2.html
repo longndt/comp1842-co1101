@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <!-- attach local Bootstrap CSS file -->
+   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+   <style>
+      input[type="email"] {
+         color: blue;
+      }
+
+      /* we must include element type name before id name if there are multipe elements with same id name */
+      input#name {
+         color: red;
+      }
+
+      h1#name {
+         background-color: aquamarine;
+      }
+
+      /* we do not need to include element type name before id name if the id name is unique (only one) */
+      #address {
+         color: green;
+      }
+   </style>
+</head>
+
+<body>
+   <input type="text" name="" id="name" placeholder="Enter your name">
+   <br><br>
+   <input type="email" name="" id="" placeholder="Enter your email">
+   <br><br>
+   <input type="text" name="" id="address" placeholder="Enter your address">
+   <h1 id="name">A heading here</h1>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CSS Selector</title>
+   <!-- 2) internal CSS -->
+   <style>
+      h1,
+      h2 {
+         color: blue;
+      }
+
+      .underline {
+         text-decoration: underline;
+      }
+
+      #test {
+         font-style: italic;
+      }
+   </style>
+   <!-- 3) external CSS (recommended)-->
+   <link rel="stylesheet" href="demo.css">
+</head>
+
+<body>
+   <!-- 1) inline CSS -->
+   <p style="color: red;">Demo text</p>
+   <h1>Heading 1</h1>
+   <h2>Heading 2</h2>
+   <h3 class="underline">Heading 3</h3>
+   <div id="div1">
+      <h4 class="underline">Heading 4</h4>
+      <h6 id="test">Heading 6</h6>
+      <h6>Another Heading 6</h6>
+   </div>
+   <div id="div2">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad autem ab corrupti alias eligendi, necessitatibus eum ullam in laborum vitae tempore consequuntur harum ipsum. Dolores veniam saepe qui id accusamus.</p>
+      <h5>Practice makes perfect</h5>
+   </div>
+</body>
+
+</html>

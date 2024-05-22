@@ -1,0 +1,14 @@
+/* universal selector : select all element in web page */
+* {
+   background-color: rgb(223, 195, 9);
+}
+
+/* select all elements in all div sections */
+div * {
+   background-color: coral;
+}
+
+/* select all elements in div2 section */
+div#div2 * {
+   color: orchid;
+}
