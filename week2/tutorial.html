@@ -1,0 +1,57 @@
+<html>
+
+<head>
+   <title>COMP1842 - JavaScript Tutorial 1</title>
+</head>
+
+<body>
+   <!-- TASK 3 (A)-->
+   <h1 id="demo"></h1>
+
+   <!-- EXTRA TASK (A)-->
+   <input type="text" id="input" placeholder="Enter your name" required>
+   <br><br>
+   <button id="ok" onclick="return displayName();">OK</button>
+   <h6 id="output"></h6>
+
+   <script>
+      //in JS, SEMICOLON at the end of each statement is OPTIONAL
+
+      //TASK 1
+      //alert: to show popup dialog to webpage
+      //alert("Hello world. We are learning web2")
+
+      //TASK 2
+      //Test with Google Chrome
+      //Press F12 then select Console tab
+      console.log("Hello world")
+      console.log("Today is Wednesday")
+      console.log("Practicing with JavaScript")
+      console.log(2024)
+
+      //TASK 3 (B)
+      //using innerHTML
+      //set content for heading 1 - "demo" using JS
+      document.getElementById("demo").innerHTML = "Vietnam is a peaceful country"
+
+      //EXTRA TASK (B)
+
+      function displayName() {
+         //1. get name from input (text placeholder)
+         let name = document.getElementById("input").value;
+         //2. display name to output (heading 6)
+         let output = document.getElementById("output")
+         if (name == "") {
+            output.style.color = "red"
+            output.style.background = "yellow"
+            output.innerHTML = "You must input your name first"
+         }
+         else {
+            output.style.fontSize = "200%"
+            output.innerHTML = "Welcome " + name + " to Greenwich Vietnam";
+         }
+      }
+   </script>
+</body>
+
+</html>
