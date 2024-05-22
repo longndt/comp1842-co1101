@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      /*
+         Descendent selector
+         div : ancestor (parent)
+         p   : descendent (child)
+      */
+      div p {
+          color: red;
+      }
+
+      div p img {
+         border-radius: 30%;
+         border: 10px solid blue;
+      }
+
+      /* > (greater than) : to select direct child of an ancestor */
+      div>h1 {
+         background-color: cornflowerblue;
+      }
+   </style>
+</head>
+<body>
+   <div>
+      <h1>Direct child of Div</h1>
+      <section>
+         <h1>Only ancestor, not direct child of Div</h1>
+      </section>
+   </div>
+
+   <p>Outside Div: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, ex! Aut explicabo harum magnam minus voluptatem sapiente earum nisi vel eos nulla, voluptate id numquam dignissimos nesciunt culpa consequatur at!</p>
+   <div>
+      <p>Inside Div: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum excepturi eius expedita dignissimos consectetur voluptatem quo? Earum sunt natus enim possimus sint nostrum at laborum repudiandae accusantium voluptatem! Doloremque, ea.
+         <img src="https://statics.vinpearl.com/from-hanoi-to-hoi-an-0_1683368897.jpg" alt="">
+      </p>
+      <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/05/11/10/hanoi-main.jpg" alt="">
+   </div>
+</body>
+</html>
