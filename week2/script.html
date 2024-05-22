@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Demo Javascript</title>
+   <script src="script.js"></script>
+   <script>
+      // alert("Script inside head section");
+   </script>
+</head>
+
+<body>
+   <h1 id="text1"></h1>
+   <h1 id="text2"></h1>
+
+   <input type="text" name="" id="inputName" placeholder="Enter your name"><br><br>
+   <input type="number" id="inputAge" placeholder="Enter your age">
+   <h1 id="outputName"></h1>
+   <h1 id="outputAge"></h1>
+   <!-- 1) Put JS inside body section -->
+   <script>
+      //alert("Script inside body section");
+      //document.getElementById("text1").innerHTML = "Just a text";
+      //document.getElementById("text2").textContent = "Just another text";
+
+      const input_name = document.getElementById("inputName");
+      const output_name = document.getElementById("outputName");
+
+      const input_age = document.getElementById("inputAge");
+      const output_age = document.getElementById("outputAge");
+
+      //display output along with input without submitting form or pressing any button
+      input_name.addEventListener('input', function() {
+         output_name.innerHTML = "Hello " + input_name.value;
+      })
+
+      input_age.addEventListener('input', () => {
+         let age = input_age.value;
+         //validate the valid age (age in range 1-150)
+         if (age >= 1 && age <= 150) {
+            //get current year
+            let currentYear = new Date().getFullYear();
+            //calculate birth year based on age and current year
+            let birthYear = currentYear - age;
+            output_age.innerHTML = "You was born in " + birthYear;
+         } else {
+            output_age.textContent = "Invalid age";
+            output_age.style.color = "red";
+         }
+      })
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <!-- input the grade => return result
+   Fail: 0-39
+   Pass: 40-59
+   Merit: 60-69
+   Distinction: 70-100
+   -->
+   <input type="number" name="" id="grade" placeholder="Enter your grade">
+   <h1 id="result"></h1>
+
+   <script>
+      const gradeInput = document.getElementById('grade')
+      const resultOutput = document.getElementById('result')
+
+      //listen to grade input
+      gradeInput.addEventListener('input', () => {
+         //get grade from input
+            let grade = gradeInput.value
+         //use conditional statement to return proper result based on given grade
+         let result = ""
+         if (grade < 40 && grade >= 0) {
+            result = "Result: Fail"
+         } else if (grade >= 40 && grade <=59) {
+            result = "Result: Pass"
+         }  else if (grade >= 60 && grade <= 69) {
+            result = "Result: Merit"
+         } else if (grade >= 70 && grade <= 100) {
+            result = "Result: Distinction"
+         } else {
+            result = "Error: Invalid grade"
+         }
+
+         //display result to output
+          resultOutput.innerHTML = result
+      })
+   </script>
+</body>
+</html>
