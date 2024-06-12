@@ -1,0 +1,13 @@
+$color_one : rgb(74, 11, 209);
+$color_two : rgb(241, 179, 6);
+
+h1 {
+    color: $color_one;
+    background-color: $color_two;
+}
+
+
+h2 {
+   color: $color_two;
+   background-color: $color_one;
+}
