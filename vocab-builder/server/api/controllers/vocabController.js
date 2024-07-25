@@ -20,7 +20,7 @@ const add_new_vocab = async (req, res) => {
 
 const delete_all_vocabs = async (req, res) => {
    try {
-      await vocabModel.deleteMany()
+      await vocabModel.deleteMany({})
       res.json({ "message": "delete all vocabs succeed !" })
    } catch (err) {
       res.send(err)
