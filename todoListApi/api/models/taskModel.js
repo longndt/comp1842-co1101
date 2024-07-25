@@ -28,6 +28,6 @@ const TaskSchema = new Schema({
 })
 
 //declare TaskModel
-const TaskModel = mongoose.model('Tasks', TaskSchema)
+const TaskModel = mongoose.model('tasks', TaskSchema)
 //export module
 module.exports = TaskModel

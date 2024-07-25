@@ -1,6 +1,8 @@
+//import controller
+const todoController = require('../controllers/todoListController')
+
 const router = (app) => {
-   //import controller
-   const todoController = require('../controllers/todoListController')
+
 
    //set routes
    //1st type: without taskId
