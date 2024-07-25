@@ -1,12 +1,8 @@
-//1st way
 // const mongoose = require('mongoose')
 // const taskModel = mongoose.model('taskModel')
 
-//2nd way
 const taskModel = require('../models/taskModel')
 
-//Feature: view all tasks
-//Method : GET
 const view_all_tasks = async (req, res) => {
    try {
       tasks = await taskModel.find({})
