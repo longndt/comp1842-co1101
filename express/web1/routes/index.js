@@ -56,4 +56,27 @@ router.get('/music', (req, res) => {
     })
 })
 
+//render login form
+router.get('/login', (req, res) => {
+  res.render('login')
+})
+
+//process login form
+router.post('/login', (req, res) => {
+  //take data from login form
+  let login = req.body
+  let username = login.username
+  let password = login.password
+  //display data to console
+  console.log(username)
+  console.log(password)
+  //display data to web
+  //res.send(username + "<br>" + password)
+  //check login
+  if (username == "admin" && password == "123456")
+    res.send("<h1>Login succeed</h1>")
+  else
+    res.send("<h1>Login failed</h1>")
+})
+
 module.exports = router;
