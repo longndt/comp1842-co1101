@@ -2,6 +2,10 @@
 const express = require('express')
 const app = express()
 
+//cors : share API
+const cors = require('cors')
+app.use(cors())
+
 //mongoose : database
 const mongoose = require('mongoose')
 const db = "mongodb://localhost:27017/vocab-builder"   // vocab-builder: db name
