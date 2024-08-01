@@ -29,7 +29,7 @@ export const AddNewWord = async (word) => {
    }
 }
 
-export const UpdateWord = async (id, word) => {
+export const EditWord = async (id, word) => {
    try {
       const response = await axios.put(backendURL + id, word)
       return response.data

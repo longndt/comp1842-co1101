@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import { ViewAllWords , DeleteWord } from "../helpers/api";
+import { ViewAllWords, DeleteWord } from "../helpers/api";
 
 export default {
   name: "Words",
@@ -64,6 +64,8 @@ export default {
         //refresh the word list (clear deleted words from table)
         const updatedWords = this.words.filter((word) => word._id !== id);
         this.words = updatedWords;
+        //display flash message
+        this.flash("Delete word succeed !");
       }
     },
   },
