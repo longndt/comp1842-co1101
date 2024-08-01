@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { api } from "../api"
+import {ViewAllWords } from "../helpers/api"
 
 export default {
   name: 'Words',
@@ -25,7 +25,7 @@ export default {
     }
   },
   async mounted() {
-    this.words = await api.getAllWords()
+    this.words = await ViewAllWords()
   }
 }
 </script>

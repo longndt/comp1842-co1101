@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Homepage from './components/Words.vue'
-import HelloWorld from './components/HelloWorld.vue'
-import Greenwich from './components/Greenwich.vue'
-import Words from './components/Words.vue'
+import Words from './views/Words.vue'
+import Show from './views/Show.vue'
+import New from './views/New.vue'
+import Edit from './views/Edit.vue'
 
 Vue.use(Router)
 
@@ -12,15 +12,23 @@ const router = new Router({
    routes: [
       {
          path: '/',
+         redirect: '/words'
+      },
+      {
+         path: '/words',
          component: Words
       },
       {
-         path: '/hello',
-         component: HelloWorld
+         path: '/words/new',
+         component: New
       },
       {
-         path: '/greenwich',
-         component: Greenwich
+         path: '/words/show/:id',
+         component: Show
+      },
+      {
+         path: '/words/edit/:id',
+         component: Edit
       }
    ]
 })
