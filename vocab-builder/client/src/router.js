@@ -16,18 +16,22 @@ const router = new Router({
       },
       {
          path: '/words',
+         name: 'Words',
          component: Words
       },
       {
          path: '/words/new',
+         name: 'New',
          component: New
       },
       {
          path: '/words/show/:id',
+         name: 'Show',
          component: Show
       },
       {
          path: '/words/edit/:id',
+         name: 'Edit',
          component: Edit
       }
    ]
